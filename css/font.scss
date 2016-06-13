@@ -1,0 +1,17 @@
+@import 'vars' ;
+@mixin font-generator ($name,$font-name){
+  @font-face{
+    font-family: $name;
+    src:local($font-name),
+    url($font-path + $font-name + '.woff')format('woff'),
+    url($font-path + $font-name + '.eot')format('eot'),
+    url($font-path + $font-name + '.ttf')format('ttf'),
+  }
+}
+@include font-generator('black','lato-black-webfont') ;
+@include font-generator('bold','lato-bold-webfont') ;
+@include font-generator('light','lato-light-webfont') ;
+@include font-generator('regular','lato-regular-webfont') ;
+
+@include font-generator('quantico','Quantico-Regular-webfont') ;
+ 
